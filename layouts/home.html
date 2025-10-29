@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ .Content }}
+  {{ range site.RegularPages }}
+    <section>
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ .Summary }}
+    </section>
+  {{ end }}
+  <main class="container mx-auto py-8">
+  <h1 class="text-4xl font-bold text-center text-blue-800">Hello Hugo + Tailwind</h1>
+  <button class="btn-primary mt-4">点击测试2</button>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click Me</button>
+</main>
+
+{{ end }}
