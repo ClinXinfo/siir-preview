@@ -10,6 +10,15 @@
   <h1 class="text-4xl font-bold text-center text-blue-800">Hello Hugo + Tailwind</h1>
   <button class="btn-primary mt-4">点击测试2</button>
   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click Me</button>
+
+  <div x-data="{ isOpen: false }">
+    <button @click="isOpen = !isOpen" class="p-2 bg-blue-500 text-white rounded">
+      点击切换
+    </button>
+    <p x-show="isOpen" class="mt-2 p-2 border">
+      这是 Alpine.js 控制的内容
+    </p>
+  </div>
 </main>
 
 {{ end }}
