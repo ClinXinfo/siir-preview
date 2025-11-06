@@ -2,8 +2,27 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'South Island Interventional Radiology'
 theme = 'rancho'
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'Products'
+    pageRef = '/products'
+    weight = 20
+  [[menus.main]]
+    name = 'Services123'
+    pageRef = '/service1'
+    weight = 30
 
-
+[params]
+ [params.footer]
+  phone = "+64 3 123 4567"
+  email = "info@irchristchurch.com"
+  address = "123 Medical Avenue, Christchurch, New Zealand"
+  facebook = "https://facebook.com/irchristchurch"
+  instagram = "https://instagram.com/irchristchurch"
 [build]
   [build.buildStats]
     enable = true

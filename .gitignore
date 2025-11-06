@@ -4,3 +4,4 @@ themes/rancho/node_modules/
 node_modules/
 public/
 hugo_stats.json
+.vscode/
