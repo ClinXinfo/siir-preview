@@ -1,0 +1,71 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="python-slugify" />
+          <option value="Pillow" />
+          <option value="whitenoise" />
+          <option value="hiredis" />
+          <option value="django-celery-beat" />
+          <option value="flower" />
+          <option value="django" />
+          <option value="django-environ" />
+          <option value="django-model-utils" />
+          <option value="django-allauth" />
+          <option value="django-crispy-forms" />
+          <option value="crispy-tailwind" />
+          <option value="django-redis" />
+          <option value="djangorestframework" />
+          <option value="django-cors-headers" />
+          <option value="drf-spectacular" />
+          <option value="stripe" />
+          <option value="django-import-export" />
+          <option value="django-sortedm2m" />
+          <option value="django-loginas" />
+          <option value="django-autocomplete-light" />
+          <option value="django-filer" />
+          <option value="django-pagedown" />
+          <option value="graphene-django" />
+          <option value="pandas" />
+          <option value="numpy" />
+          <option value="wagtail" />
+          <option value="wagtail-transfer" />
+          <option value="django-vite" />
+          <option value="mailchimp-marketing" />
+          <option value="django-ninja" />
+          <option value="Werkzeug" />
+          <option value="ipdb" />
+          <option value="psycopg" />
+          <option value="django-stubs" />
+          <option value="pytest-sugar" />
+          <option value="djangorestframework-stubs" />
+          <option value="types-python-dateutil" />
+          <option value="sphinx" />
+          <option value="sphinx-autobuild" />
+          <option value="flake8" />
+          <option value="flake8-isort" />
+          <option value="coverage" />
+          <option value="djlint" />
+          <option value="pylint-django" />
+          <option value="pylint-celery" />
+          <option value="pre-commit" />
+          <option value="factory-boy" />
+          <option value="django-debug-toolbar" />
+          <option value="django-extensions" />
+          <option value="django-coverage-plugin" />
+          <option value="pytest-django" />
+          <option value="webtest" />
+          <option value="django-webtest" />
+          <option value="pyquery" />
+          <option value="freezegun" />
+          <option value="django-silk" />
+          <option value="playwright" />
+          <option value="pytest-playwright" />
+          <option value="graphene" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
