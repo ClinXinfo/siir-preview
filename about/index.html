@@ -1,223 +1,186 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About list | Canterbury Interventional Group</title>
-    <meta name="description" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Medical Team</title>
 
-    <link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16" type="image/x-icon">
-<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#008060',
+            secondary: '#E6F7F2',
+            accent: '#D1EAE5',
+          },
+        },
+      }
+    }
+  </script>
 
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0A3D62',      
-                        secondary: '#3C6382',    
-                        accent: '#60A3BC',       
-                        light: '#F8FAFC',        
-                        dark: '#1E293B',         
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-
-    
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            .transition-navbar {
-                transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s;
-            }
-        }
-    </style>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+    }
+  </style>
 </head>
-<body class="font-sans text-dark bg-gray-50">
-    
-    <nav class="bg-gradient-to-r from-blue-900 via-teal-800 to-blue-900 text-white px-6 py-4">
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
-    <div class="flex items-center gap-2 w-[164px]">
-      <img src="/images/logo.svg" class="full-size" />
-    </div>
-    <div class="flex items-center gap-8">
-      <a href="/" class="hover:text-teal-200 transition">Home</a>
-      <a href="/about" class="hover:text-teal-200 transition">About us</a>
-      <a href="/services" class="hover:text-teal-200 transition">Services</a>
-      <a href="#" class="hover:text-teal-200 transition">Blogs</a>
-    </div>
-    <div class="flex items-center gap-3">
-      <button class="text-white border h-[40px] w-[97px] text-center rounded font-medium hover:bg-teal-100 transition">
-        Login
-      </button>
-      <button class="bg-[#002868] text-white h-[40px] w-[97px] text-center rounded font-medium hover:bg-teal-500 transition">
-        Sign up
-      </button>
-    </div>
-  </div>
-</nav>
+<body class="font-sans text-gray-800">
 
+   <nav
+      class="bg-gradient-to-r from-blue-900 via-teal-800 to-blue-900 text-white px-6 py-4"
+    >
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-2 w-[164px]">
+          <img src="https://clinxinfo.github.io/siir-preview/images/logo.svg" class="full-size" />
+        </div>
+        <div class="flex items-center gap-8">
+          <a href="https://clinxinfo.github.io/siir-preview/" class="hover:text-teal-200 transition">Home</a>
+          <a href="https://clinxinfo.github.io/siir-preview/about" class="hover:text-teal-200 transition">About us</a>
+          <a href="https://clinxinfo.github.io/siir-preview/services" class="hover:text-teal-200 transition">Services</a>
+          <a href="#" class="hover:text-teal-200 transition">Blogs</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button
+            class="text-white border h-[40px] w-[97px] text-center rounded font-medium hover:bg-teal-100 transition"
+          >
+            Login
+          </button>
+          <button
+            class="bg-[#002868] text-white h-[40px] w-[97px] text-center rounded font-medium hover:bg-teal-500 transition"
+          >
+            Sign up
+          </button>
+        </div>
+      </div>
+    </nav>
 
-    
-    <main>
-        
-  <section class="bg-gradient-to-r from-green-600 to-green-400 text-white py-8 px-4 md:px-8">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+  <section class="relative h-[500px] overflow-hidden">
+
+    <div class="absolute inset-0 z-0">
       <img
-        src="https://picsum.photos/800/400?random=10"
-        alt="Surgical Team"
-        class="w-full md:w-1/2 rounded-lg shadow-md object-cover"
+        src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/9d79d48bc71b40ef855a388664599442.png~tplv-a9rns2rl98-24:720:720.png?rcl=20251126204928AC90794E20208D183B2B&rk3s=8e244e95&rrcfp=8a172a1a&x-expires=1764766168&x-signature=tDQQblbHyf4evWeKfspI9Rw8kqI%3D"
+        alt="Medical team in operation"
+        class="w-full h-full object-cover"
       >
-      <div class="w-full md:w-1/2">
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">About us</h1>
-        <p class="text-white/90 leading-relaxed">
-          Our expert team offers minimally invasive, image-guided procedures that provide rapid relief, improved outcomes, and faster recovery—all without the need for traditional surgery.
+
+      <div class="absolute inset-0 bg-primary/40"></div>
+    </div>
+
+
+    <div class="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-end">
+      <div class="max-w-lg text-white text-right">
+        <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold mb-4 text-shadow">About us</h1>
+        <p class="text-lg md:text-xl leading-relaxed">
+          Our expert team offers minimally invasive, image-guided procedures that provide rapid relief, improved outcomes, and faster recovery — all without the need for traditional surgery.
         </p>
       </div>
     </div>
   </section>
 
-  
-  <section class="py-8 px-4 md:px-8">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-      
-      <div class="bg-blue-50 rounded-lg p-6 text-center shadow-sm">
-        <img 
-          src="https://picsum.photos/300/300?random=1" 
-          alt="Dr. Joost Lameijer" 
-          class="w-40 h-40 object-cover rounded-full mx-auto mb-4"
-        >
-        <h2 class="text-xl font-bold text-gray-800">Dr. Joost Lameijer, MD, PhD</h2>
-        <p class="text-gray-600 mt-2 text-sm md:text-base">
-          Consultant Interventional Radiologist<br>
-          specialist in both vascular and nonvascular procedures
-        </p>
-      </div>
 
-      
-      <div class="bg-blue-100 rounded-lg p-6 text-center shadow-sm">
-        <img 
-          src="https://picsum.photos/300/300?random=2" 
-          alt="Dr. Howard (Hyukjoon) Lee" 
-          class="w-40 h-40 object-cover rounded-full mx-auto mb-4"
-        >
-        <h2 class="text-xl font-bold text-gray-800">Dr. Howard (Hyukjoon) Lee, MD, MPH, PhD</h2>
-        <p class="text-gray-600 mt-2 text-sm md:text-base">
-          Consultant Interventional Radiologist |<br>
-          Specialist in Advanced Vascular and Nonvascular Interventions
-        </p>
-      </div>
-    </div>
-  </section>
+  <section class="py-16 bg-gradient-to-b from-secondary to-accent">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-  
-  <section class="max-w-6xl mx-auto px-4 md:px-8 pb-12">
-    
-    <div class="bg-blue-50 rounded-lg p-6 mb-6 shadow-sm">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Leading Expert in Interventional Radiology</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Dr. Howard Lee is a highly respected Consultant Interventional Radiologist, known for his specialized skills in both vascular and nonvascular procedures. With an unwavering commitment to enhancing patient care through cutting-edge, minimally invasive techniques, Dr. Lee has established himself as a prominent authority in his field.
-      </p>
-    </div>
-
-    
-    <div class="bg-blue-50 rounded-lg p-6 mb-6 shadow-sm">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Internationally Recognized Expertise</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Dr. Lee's distinguished career includes comprehensive training and esteemed positions at globally recognized institutions. After completing his radiology residency and fellowship in interventional radiology at Seoul National University Bundang Hospital, a premier tertiary care center in South Korea, he was appointed attending physician and assistant professor at Seoul National University Hospital. Following this, he joined Christchurch Hospital as a consultant in 2019. Dr. Lee further expanded his clinical expertise and academic contributions as an assistant professor at the University of Pittsburgh Medical Center in the United States before returning to Christchurch in 2024.
-      </p>
-    </div>
-
-    
-    <div class="bg-blue-50 rounded-lg p-6 mb-6 shadow-sm">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Patient-Centered and Results-Driven Care</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Dedicated to patient-centered care, Dr. Lee leverages the latest minimally invasive techniques and devices to achieve excellent outcomes. He offers personalized consultations and treatments at St. George's Hospital and also practices within the Interventional Radiology department at Christchurch Hospital. Through close collaboration with his medical colleagues, Dr. Lee ensures that each patient receives the highest standards of care, fostering optimal patient experiences.
-      </p>
-    </div>
-
-    
-    <div class="bg-blue-50 rounded-lg p-6 shadow-sm">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Comprehensive Expertise in Specialized Procedures</h3>
-      <p class="text-gray-700 mb-3">Dr. Lee offers a broad range of specialized interventions, including:</p>
-      <ul class="list-disc pl-6 text-gray-700 space-y-1.5">
-        <li>Musculoskeletal Pain Management through Transarterial Microembolization (TAME) for chronic pain, including:</li>
-        <li>- Genicular Artery Embolization for knee pain</li>
-        <li>- Shoulder Tension & Adhesive Capsulitis, shoulder pain</li>
-        <li>- Elbow Pain (tennis & Golf elbow) Embolization</li>
-        <li>- Plantar Fasciitis Embolization</li>
-        <li>- Hip pain embolization for Greater Trochanteric Pain Syndrome (GTPS), hip OA</li>
-        <li>- Achilles Tendinitis Embolization</li>
-        <li>Liver Cancer Treatments: Transarterial Chemoembolization (TACE) and Transarterial Radioembolization (TARE; Y-90) for hepatocellular carcinoma (HCC) and Liver metastasis</li>
-        <li>Ablative Procedures for Tumor Treatment in the kidney and liver</li>
-        <li>- Microwave Ablation, Cryoablation, IRE, ECT</li>
-        <li>Pelvic and Urinary Conditions: Ovarian Vein Embolization for pelvic congestion syndrome, Uterine Fibroid Embolization for myoma, Catheter directed sclerotherapy for ovarian endometrioma</li>
-        <li>Prostate Embolization: Prostate Artery Embolization for benign prostatic hyperplasia (BPH)</li>
-        <li>Hemorrhoid Embolization: Rectal Artery Embolization for Hemorrhoids</li>
-        <li>Peripheral Arterial Disease and Aortic Aneurysmal Disease Treatments</li>
-        <li>Portacath Insertions for patients requiring long-term intravenous therapy</li>
-      </ul>
-    </div>
-  </section>
-
-
-    </main>
-
-    
-    <footer class="bg-blue-900 text-white px-6 py-12 mt-20">
-  <div class="max-w-7xl mx-auto">
-    <div class="flex justify-around items-start mb-20 mr-20">
-      <div class="flex flex-col items-center gap-2 mb-4">
-        <div class="w-[164px]">
-          <img src="/images/logo.svg" />
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-lg transition-shadow">
+          <img
+            src="https://picsum.photos/400/300?random=1"
+            alt="Dr. Joost Lameijer"
+            class="w-full h-64 object-cover"
+          >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Dr. Joost Lameijer, MD, PhD</h3>
+            <p class="text-gray-600">
+              Consultant Interventional Radiologist specializing in both vascular and nonvascular procedures
+            </p>
+          </div>
         </div>
-        <div class="flex gap-4">
-          <a href="#" class="text-white">f</a>
-          <a href="#" class="text-white">@</a>
+
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform hover:shadow-lg transition-shadow">
+          <img
+            src="https://picsum.photos/400/300?random=2"
+            alt="Dr. Howard Lee"
+            class="w-full h-64 object-cover"
+          >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Dr. Howard (Hyukjoon) Lee, MD, MPH, PhD</h3>
+            <p class="text-gray-600">
+              Consultant Interventional Radiologist | Specialist in Advanced Vascular and Nonvascular Interventions
+            </p>
+          </div>
         </div>
       </div>
-      <div>
-        <h4 class="font-bold mb-4">Home</h4>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4">About us</h4>
-        <a href="/about" class="block text-white mb-2">About us</a>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4">Services</h4>
-        <a href="#" class="block text-white mb-2">Terms</a>
-      </div>
-      <div>
-        <h4 class="font-bold mb-4">Blogs</h4>
-        <a href="#" class="block text-white mb-2">Blogs</a>
-      </div>
     </div>
-    <div class="pt-8 text-right text-white text-sm">
-      <p>&copy; 2025 Canterbury Interventional Group. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+  </section>
 
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+
+      <div class="bg-white rounded-xl shadow-sm p-8 mb-8 border-l-4 border-primary">
+        <h2 class="text-2xl font-bold text-primary mb-4">Leading Expert in Interventional Radiology</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Dr. Howard Lee is a highly respected Consultant Interventional Radiologist, known for his specialized skills in both vascular and nonvascular procedures. With an unwavering commitment to enhancing patient care through cutting-edge, minimally invasive techniques, Dr. Lee has established himself as a prominent authority in his field.
+        </p>
+      </div>
+
+
+      <div class="bg-white rounded-xl shadow-sm p-8 mb-8 border-l-4 border-primary">
+        <h2 class="text-2xl font-bold text-primary mb-4">Internationally Recognized Expertise</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Dr. Lee's distinguished career includes comprehensive training and esteemed positions at globally recognized institutions. After completing his radiology residency and fellowship in interventional radiology at Seoul National University Bundang Hospital, a premier tertiary care center in South Korea, he was appointed attending physician and assistant professor at Seoul National University Hospital. Following this, he joined Christchurch Hospital as a consultant in 2019. Dr. Lee further expanded his clinical expertise and academic contributions as an assistant professor at the renowned University of Pittsburgh Medical Center in the United States before returning to Christchurch in 2024.
+        </p>
+      </div>
+
+
+      <div class="bg-white rounded-xl shadow-sm p-8 border-l-4 border-primary">
+        <h2 class="text-2xl font-bold text-primary mb-4">Patient-Centered and Results-Driven Care</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Dedicated to patient-centered care, Dr. Lee leverages the latest minimally invasive techniques and devices to achieve excellent outcomes. He offers personalized consultations and treatments at St. George's Hospital and also practices within the Interventional Radiology department at Christchurch Hospital. Through close collaboration with his medical colleagues, Dr. Lee ensures that each patient receives the highest standards of care, fostering optimal patient experiences.
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-blue-900 text-white px-6 py-12 mt-20">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex justify-around items-start mb-20 mr-20">
+          <div class="flex flex-col items-center gap-2 mb-4">
+            <div class="w-[164px]">
+              <img src="https://clinxinfo.github.io/siir-preview/images/logo.svg" />
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="text-white">f</a>
+              <a href="#" class="text-white">@</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Home</h4>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">About us</h4>
+            <a href="#" class="block text-white mb-2">About us</a>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Services</h4>
+            <a href="#" class="block text-white mb-2">Terms</a>
+          </div>
+          <div>
+            <h4 class="font-bold mb-4">Blogs</h4>
+          </div>
+        </div>
+        <div class="pt-8 text-right text-white text-sm">
+          <p>© 2025 Canterbury Interventional Group. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
