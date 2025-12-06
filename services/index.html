@@ -1,262 +1,333 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services | SIIR</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Canterbury Interventional Group</title>
+    <meta name="description" content="">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16" type="image/x-icon">
+<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
 
-  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#006666',
-            secondary: '#002868',
-            accent: '#4ECDC4',
-            light: '#E6F7F5',
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-        },
-      }
-    }
-  </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .bg-gradient-service {
-        background: linear-gradient(135deg, #006666 0%, #008080 50%, #4ECDC4 100%);
-      }
-      .card-hover {
-        transition: all 0.3s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(0, 102, 102, 0.1), 0 10px 10px -5px rgba(0, 102, 102, 0.04);
-      }
-    }
-  </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A3D62',      
+                        secondary: '#3C6382',    
+                        accent: '#60A3BC',       
+                        light: '#F8FAFC',        
+                        dark: '#1E293B',         
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-navbar {
+                transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s;
+            }
+        }
+    </style>
 </head>
-<body class="bg-white font-sans">
-
-  <nav
-      class="bg-gradient-to-r from-blue-900 via-teal-800 to-blue-900 text-white px-6 py-4"
-    >
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <div class="flex items-center gap-2 w-[164px]">
-          <img src="https://clinxinfo.github.io/siir-preview/images/logo.svg" class="full-size" />
-        </div>
-        <div class="flex items-center gap-8">
-          <a href="https://clinxinfo.github.io/siir-preview/" class="hover:text-teal-200 transition">Home</a>
-          <a href="https://clinxinfo.github.io/siir-preview/about" class="hover:text-teal-200 transition">About us</a>
-          <a href="https://clinxinfo.github.io/siir-preview/services" class="hover:text-teal-200 transition">Services</a>
-          <a href="#" class="hover:text-teal-200 transition">Blogs</a>
-        </div>
-        <div class="flex items-center gap-3">
-          <button
-            class="text-white border h-[40px] w-[97px] text-center rounded font-medium hover:bg-teal-100 transition"
-          >
-            Login
-          </button>
-          <button
-            class="bg-[#002868] text-white h-[40px] w-[97px] text-center rounded font-medium hover:bg-teal-500 transition"
-          >
-            Sign up
-          </button>
-        </div>
-      </div>
-    </nav>
-
-
-  <section class="bg-gradient-service text-white overflow-hidden relative">
-    <div class="absolute right-0 top-0 h-full w-1/2 hidden lg:block">
-      <img src="https://picsum.photos/id/1084/800/600" alt="Medical Professional" class="h-full w-full object-cover opacity-70" />
+<body class="font-sans text-dark bg-gray-50">
+    
+    <nav class="bg-gradient-to-r from-blue-900 via-teal-800 to-blue-900 text-white px-6 py-4">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <div class="flex items-center gap-2 w-[164px]">
+      <img src="/images/logo.svg" class="full-size" />
     </div>
-    <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
-      <div class="max-w-xl">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-        <p class="text-lg mb-8 leading-relaxed">
-          Our expert team offers minimally invasive, image-guided procedures that provide rapid relief, improved outcomes, and faster recovery—all without the need for traditional surgery.
-        </p>
-      </div>
+    <div class="flex items-center gap-8">
+      <a href="https://clinxinfo.github.io/siir-preview/" class="hover:text-teal-200 transition">Home</a>
+      <a href="https://clinxinfo.github.io/siir-preview/about" class="hover:text-teal-200 transition">About us</a>
+      <a href="https://clinxinfo.github.io/siir-preview/services" class="hover:text-teal-200 transition">Services</a>
+      <a href="#" class="hover:text-teal-200 transition">Blogs</a>
     </div>
-  </section>
-
-
-  <section class="max-w-7xl mx-auto px-6 py-16">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover border border-gray-100">
-        <div class="h-56 overflow-hidden bg-light">
-          <img src="https://picsum.photos/id/237/600/400" alt="Achilles Tendon" class="w-full h-full object-cover mix-blend-multiply opacity-80" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Achilles Tendon</h3>
-          <p class="text-gray-600 text-sm">
-            Minimally invasive treatments for Achilles tendon injuries and conditions, promoting faster healing and recovery.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover border border-gray-100">
-        <div class="h-56 overflow-hidden bg-light">
-          <img src="https://picsum.photos/id/238/600/400" alt="Elbow Pain" class="w-full h-full object-cover mix-blend-multiply opacity-80" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Elbow Pain</h3>
-          <p class="text-gray-600 text-sm">
-            Targeted interventions to relieve elbow pain caused by various conditions, including tendinitis and bursitis.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover border border-gray-100">
-        <div class="h-56 overflow-hidden bg-light">
-          <img src="https://picsum.photos/id/239/600/400" alt="Knee Pain" class="w-full h-full object-cover mix-blend-multiply opacity-80" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Knee Pain</h3>
-          <p class="text-gray-600 text-sm">
-            Advanced treatments for knee pain, including osteoarthritis, using image-guided injections and therapies.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover border border-gray-100">
-        <div class="h-56 overflow-hidden bg-light">
-          <img src="https://picsum.photos/id/240/600/400" alt="Hip Pain" class="w-full h-full object-cover mix-blend-multiply opacity-80" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Hip Pain</h3>
-          <p class="text-gray-600 text-sm">
-            Minimally invasive procedures to address hip pain, improving mobility and quality of life without major surgery.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover border border-gray-100">
-        <div class="h-56 overflow-hidden bg-light">
-          <img src="https://picsum.photos/id/241/600/400" alt="Plantar Fasciitis" class="w-full h-full object-cover mix-blend-multiply opacity-80" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Plantar Fasciitis</h3>
-          <p class="text-gray-600 text-sm">
-            Effective treatments for heel pain caused by plantar fasciitis, including targeted injections and therapies.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover border border-gray-100">
-        <div class="h-56 overflow-hidden bg-light">
-          <img src="https://picsum.photos/id/242/600/400" alt="Shoulder Pain" class="w-full h-full object-cover mix-blend-multiply opacity-80" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Shoulder Pain</h3>
-          <p class="text-gray-600 text-sm">
-            Image-guided interventions for shoulder pain, including rotator cuff issues and arthritis-related conditions.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover border border-gray-100">
-        <div class="h-56 overflow-hidden bg-light">
-          <img src="https://picsum.photos/id/243/600/400" alt="Neovascularization" class="w-full h-full object-cover mix-blend-multiply opacity-80" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Neovascularization</h3>
-          <p class="text-gray-600 text-sm">
-            Advanced procedures to promote new blood vessel growth, improving circulation and tissue healing.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover border border-gray-100">
-        <div class="h-56 overflow-hidden bg-light">
-          <img src="https://picsum.photos/id/244/600/400" alt="Benign prostatic hyperplasia" class="w-full h-full object-cover mix-blend-multiply opacity-80" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Benign prostatic hyperplasia</h3>
-          <p class="text-gray-600 text-sm">
-            Minimally invasive treatments for enlarged prostate, reducing symptoms and improving quality of life.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover border border-gray-100">
-        <div class="h-56 overflow-hidden bg-light">
-          <img src="https://picsum.photos/id/245/600/400" alt="Uterine Fibroid" class="w-full h-full object-cover mix-blend-multiply opacity-80" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-primary mb-2">Uterine Fibroid</h3>
-          <p class="text-gray-600 text-sm">
-            Non-surgical uterine fibroid embolization to reduce symptoms and improve quality of life.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="bg-primary text-white py-16">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6">Need More Information?</h2>
-      <p class="text-lg mb-8 max-w-2xl mx-auto">
-        Our team is ready to answer your questions and help you find the right treatment option for your condition.
-      </p>
-      <button class="bg-white text-primary px-8 py-3 rounded font-semibold hover:bg-gray-100 transition flex items-center gap-2 mx-auto">
-        Contact Us <span>→</span>
+    <div class="flex items-center gap-3">
+      <button class="text-white border h-[40px] w-[97px] text-center rounded font-medium hover:bg-teal-100 transition">
+        Login
+      </button>
+      <button class="bg-[#002868] text-white h-[40px] w-[97px] text-center rounded font-medium hover:bg-teal-500 transition">
+        Sign up
       </button>
     </div>
-  </section>
+  </div>
+</nav>
 
 
-  <footer class="bg-blue-900 text-white px-6 py-12">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-around items-start mb-20">
-        <div class="flex flex-col items-center gap-2 mb-8 md:mb-0">
-          <div class="w-[164px]">
-            <img src="https://clinxinfo.github.io/siir-preview/images/logo.svg" alt="SIIR Logo" />
-          </div>
-          <div class="flex gap-4 mt-4">
-            <a href="#" class="text-white hover:text-teal-200 transition"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="text-white hover:text-teal-200 transition"><i class="fa fa-instagram"></i></a>
-          </div>
+    
+    <main>
+        
+
+<section class="bg-gradient-to-br from-primary to-secondary text-white py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Our service</h1>
+                <p class="mb-8 max-w-md">
+                    Our expert team offers minimally invasive, image-guided procedures that provide rapid relief,
+                    improved outcomes, and faster recovery—all without the need for traditional surgery.
+                </p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="/services/HeroSection.png" alt="Doctor performing procedure"
+                     class="rounded-lg shadow-lg">
+            </div>
         </div>
-        <div class="mb-8 md:mb-0">
-          <h4 class="font-bold mb-4">Home</h4>
+    </div>
+</section>
+
+
+<section class="bg-gradient-to-b from-secondary/90 to-white py-10">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            
+            
+            
+            
+            <a href='/services/achilles-tendon'>
+            <div class="relative w-348 h-348 rounded-md border-2 border-blue-400 overflow-hidden">
+                
+                <img
+                        src="/services/AchillesTendon.png"
+                        alt="Achilles Tendon"
+                        class="w-full h-full object-cover filter blur-md"
+                >
+                
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h3 class="text-xl font-bold text-black px-3">
+                        Achilles Tendon
+                    </h3>
+                </div>
+            </div>
+                </a>
+            
+            
+            
+            
+            <a href='/services/elbow-pain'>
+            <div class="relative w-348 h-348 rounded-md border-2 border-blue-400 overflow-hidden">
+                
+                <img
+                        src="/services/ElbowPain.png"
+                        alt="Elbow Pain"
+                        class="w-full h-full object-cover filter blur-md"
+                >
+                
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h3 class="text-xl font-bold text-black px-3">
+                        Elbow Pain
+                    </h3>
+                </div>
+            </div>
+                </a>
+            
+            
+            
+            
+            <a href='/services/knee-pain'>
+            <div class="relative w-348 h-348 rounded-md border-2 border-blue-400 overflow-hidden">
+                
+                <img
+                        src="/services/KneePain.png"
+                        alt="Knee Pain"
+                        class="w-full h-full object-cover filter blur-md"
+                >
+                
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h3 class="text-xl font-bold text-black px-3">
+                        Knee Pain
+                    </h3>
+                </div>
+            </div>
+                </a>
+            
+            
+            
+            
+            <a href='/services/hip-pain'>
+            <div class="relative w-348 h-348 rounded-md border-2 border-blue-400 overflow-hidden">
+                
+                <img
+                        src="/services/HipPain.png"
+                        alt="Hip Pain"
+                        class="w-full h-full object-cover filter blur-md"
+                >
+                
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h3 class="text-xl font-bold text-black px-3">
+                        Hip Pain
+                    </h3>
+                </div>
+            </div>
+                </a>
+            
+            
+            
+            
+            <a href='/services/plantar-fasciitis'>
+            <div class="relative w-348 h-348 rounded-md border-2 border-blue-400 overflow-hidden">
+                
+                <img
+                        src="/services/PlantarFasciitis.png"
+                        alt="Plantar Fasciitis"
+                        class="w-full h-full object-cover filter blur-md"
+                >
+                
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h3 class="text-xl font-bold text-black px-3">
+                        Plantar Fasciitis
+                    </h3>
+                </div>
+            </div>
+                </a>
+            
+            
+            
+            
+            <a href='/services/shoulder-pain'>
+            <div class="relative w-348 h-348 rounded-md border-2 border-blue-400 overflow-hidden">
+                
+                <img
+                        src="/services/ShoulderPain.png"
+                        alt="Shoulder Pain"
+                        class="w-full h-full object-cover filter blur-md"
+                >
+                
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h3 class="text-xl font-bold text-black px-3">
+                        Shoulder Pain
+                    </h3>
+                </div>
+            </div>
+                </a>
+            
+            
+            
+            
+            <a href='/services/neovascularization'>
+            <div class="relative w-348 h-348 rounded-md border-2 border-blue-400 overflow-hidden">
+                
+                <img
+                        src="/services/Neovascularization.png"
+                        alt="Neovascularization"
+                        class="w-full h-full object-cover filter blur-md"
+                >
+                
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h3 class="text-xl font-bold text-black px-3">
+                        Neovascularization
+                    </h3>
+                </div>
+            </div>
+                </a>
+            
+            
+            
+            
+            <a href='/services/benign-prostatic-hyperplasia'>
+            <div class="relative w-348 h-348 rounded-md border-2 border-blue-400 overflow-hidden">
+                
+                <img
+                        src="/services/Benignprostatichyperplasia.png"
+                        alt="Benign prostatic hyperplasia"
+                        class="w-full h-full object-cover filter blur-md"
+                >
+                
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h3 class="text-xl font-bold text-black px-3">
+                        Benign prostatic hyperplasia
+                    </h3>
+                </div>
+            </div>
+                </a>
+            
+            
+            
+            
+            <a href='/services/uterine-fibroid'>
+            <div class="relative w-348 h-348 rounded-md border-2 border-blue-400 overflow-hidden">
+                
+                <img
+                        src="/services/UterineFibroid.png"
+                        alt="Uterine Fibroid"
+                        class="w-full h-full object-cover filter blur-md"
+                >
+                
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <h3 class="text-xl font-bold text-black px-3">
+                        Uterine Fibroid
+                    </h3>
+                </div>
+            </div>
+                </a>
+            
         </div>
-        <div class="mb-8 md:mb-0">
-          <h4 class="font-bold mb-4">About us</h4>
-          <a href="about-us.html" class="block text-white hover:text-teal-200 transition mb-2">About us</a>
+    </div>
+</section>
+
+
+    </main>
+
+    
+    <footer class="bg-blue-900 text-white px-6 py-12 mt-20">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-around items-start mb-20 mr-20">
+      <div class="flex flex-col items-center gap-2 mb-4">
+        <div class="w-[164px]">
+          <img src="/images/logo.svg" />
         </div>
-        <div class="mb-8 md:mb-0">
-          <h4 class="font-bold mb-4">Services</h4>
-          <a href="#" class="block text-white hover:text-teal-200 transition mb-2">All Services</a>
-          <a href="#" class="block text-white hover:text-teal-200 transition mb-2">Vascular Procedures</a>
-          <a href="#" class="block text-white hover:text-teal-200 transition mb-2">Musculoskeletal</a>
-        </div>
-        <div>
-          <h4 class="font-bold mb-4">Blogs</h4>
+        <div class="flex gap-4">
+          <a href="#" class="text-white">f</a>
+          <a href="#" class="text-white">@</a>
         </div>
       </div>
-      <div class="pt-8 text-right text-white text-sm border-t border-blue-800">
-        <p>© 2025 Canterbury Interventional Group. All rights reserved.</p>
+      <div>
+        <h4 class="font-bold mb-4">Home</h4>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">About us</h4>
+        <a href="/about" class="block text-white mb-2">About us</a>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Services</h4>
+        <a href="#" class="block text-white mb-2">Terms</a>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Blogs</h4>
+        <a href="#" class="block text-white mb-2">Blogs</a>
       </div>
     </div>
-  </footer>
+    <div class="pt-8 text-right text-white text-sm">
+      <p>&copy; 2025 Canterbury Interventional Group. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
