@@ -11,7 +11,7 @@
 <link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
 
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
 
     
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -20,24 +20,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     
-<!--    <script>-->
-<!--        tailwind.config = {-->
-<!--            theme: {-->
-<!--                extend: {-->
-<!--                    colors: {-->
-<!--                        primary: '#0A3D62',      -->
-<!--                        secondary: '#3C6382',    -->
-<!--                        accent: '#60A3BC',       -->
-<!--                        light: '#F8FAFC',        -->
-<!--                        dark: '#1E293B',         -->
-<!--                    },-->
-<!--                    fontFamily: {-->
-<!--                        sans: ['Inter', 'system-ui', 'sans-serif'],-->
-<!--                    },-->
-<!--                }-->
-<!--            }-->
-<!--        }-->
-<!--    </script>-->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A3D62',      
+                        secondary: '#3C6382',    
+                        accent: '#60A3BC',       
+                        light: '#F8FAFC',        
+                        dark: '#1E293B',         
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 
     
     <style type="text/tailwindcss">
@@ -59,13 +59,18 @@
     <nav class="bg-gradient-to-r from-blue-900 via-teal-800 to-blue-900 text-white px-6 py-4">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <div class="flex items-center gap-2 w-[164px]">
-      <img src="https://clinxinfo.github.io/siir-preview/images/logo.svg" class="full-size" />
+      <img src="/images/logo.svg" class="full-size" />
     </div>
     <div class="flex items-center gap-8">
-      <a href="https://clinxinfo.github.io/siir-preview/" class="hover:text-teal-200 transition">Home</a>
-      <a href="https://clinxinfo.github.io/siir-preview/about" class="hover:text-teal-200 transition">About us</a>
-      <a href="https://clinxinfo.github.io/siir-preview/services" class="hover:text-teal-200 transition">Services</a>
-      <a href="#" class="hover:text-teal-200 transition">Blogs</a>
+      
+        <a href="/" class="hover:text-teal-200 transition">Home</a>
+      
+        <a href="/about/" class="hover:text-teal-200 transition active text-teal-500 font-bold ">About us</a>
+      
+        <a href="/services/" class="hover:text-teal-200 transition">Service</a>
+      
+        <a href="" class="hover:text-teal-200 transition">Blogs</a>
+      
     </div>
     <div class="flex items-center gap-3">
       <button class="text-white border h-[40px] w-[97px] text-center rounded font-medium hover:bg-teal-100 transition">
@@ -82,15 +87,20 @@
     
     <main>
         
-  <section class="bg-gradient-to-r from-green-600 to-green-400 text-white py-8 px-4 md:px-8">
+
+<div class="bg-gradient-to-br from-[#009647] via-[#6198AF] to-white bg-fixed bg-cover [background-image:linear-gradient(176.14deg,#009647_3.23%,#6198AF_49%,#FFFFFF_94.76%)]">
+
+
+    <section class="text-white py-8 px-4 md:px-8">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
       <img
-        src="https://picsum.photos/800/400?random=10"
+        src="/images/about/hero-section-bg.png"
         alt="Surgical Team"
-        class="w-full md:w-1/2 rounded-lg shadow-md object-cover"
+        class="w-full md:w-2/5 rounded-lg shadow-md object-cover"
       >
-      <div class="w-full md:w-1/2">
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">About us</h1>
+      <div class="w-full md:w-3/5">
+
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 font-constantia font-normal text-6xl leading-[80px] tracking-0 [leading-trim:none]">About us</h1>
         <p class="text-white/90 leading-relaxed">
           Our expert team offers minimally invasive, image-guided procedures that provide rapid relief, improved outcomes, and faster recovery—all without the need for traditional surgery.
         </p>
@@ -98,99 +108,310 @@
     </div>
   </section>
 
-  
-  <section class="py-8 px-4 md:px-8">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-      
-      <div class="bg-blue-50 rounded-lg p-6 text-center shadow-sm">
-        <img 
-          src="https://picsum.photos/300/300?random=1" 
-          alt="Dr. Joost Lameijer" 
-          class="w-40 h-40 object-cover rounded-full mx-auto mb-4"
-        >
-        <h2 class="text-xl font-bold text-gray-800">Dr. Joost Lameijer, MD, PhD</h2>
-        <p class="text-gray-600 mt-2 text-sm md:text-base">
-          Consultant Interventional Radiologist<br>
-          specialist in both vascular and nonvascular procedures
-        </p>
-      </div>
+    <div x-data="{ doctor: 'Lameijer' }">
+        <section class="py-8 px-4 md:px-8">
+            <div class="max-w-6xl mx-auto flex gap-4 justify-between w-full">
+                
+                <div
+                        class="bg-[#FFFFFF4A] rounded-lg shadow-xl overflow-hidden transition-all duration-300 cursor-pointer flex-1 p-4 "
+                        @click="doctor = 'Lameijer'"
+                        :class="{
+           'bg-[#1B1B1B4A] shadow-2xl': doctor === 'Lameijer'
+      }"
+    >
+                    <div class="p-6">
+                        <div class="bg-white/20 backdrop-blur-sm rounded-xl overflow-hidden">
+                            <img src="/images/about/Lameijer.png"
+                                 alt="Dr. Joost Lameijer"
+                                 class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 text-white text-center">
+                        <h1 class="text-[clamp(1.5rem,4vw,2.25rem)] font-bold leading-tight italic">Dr. Joost Lameijer,
+                            MD, PhD</h1>
+                        <p class="mt-4 text-[clamp(1rem,2vw,1.25rem)] text-white/90 leading-relaxed">
+                            Consultant Interventional Radiologist specialising in both vascular and nonvascular
+                            procedures
+                        </p>
+                    </div>
+                </div>
 
-      
-      <div class="bg-blue-100 rounded-lg p-6 text-center shadow-sm">
-        <img 
-          src="https://picsum.photos/300/300?random=2" 
-          alt="Dr. Howard (Hyukjoon) Lee" 
-          class="w-40 h-40 object-cover rounded-full mx-auto mb-4"
-        >
-        <h2 class="text-xl font-bold text-gray-800">Dr. Howard (Hyukjoon) Lee, MD, MPH, PhD</h2>
-        <p class="text-gray-600 mt-2 text-sm md:text-base">
-          Consultant Interventional Radiologist |<br>
-          Specialist in Advanced Vascular and Nonvascular Interventions
-        </p>
-      </div>
+                
+                <div
+                        class="bg-[#FFFFFF4A] rounded-lg shadow-xl overflow-hidden transition-all duration-300 cursor-pointer flex-1 p-4 "
+                        @click="doctor = 'Hyukjoon'"
+                        :class="{
+           'bg-[#1B1B1B4A] shadow-2xl': doctor === 'Hyukjoon'
+      }"
+    >
+                    
+                    <div class="p-6">
+                        <div class="bg-white/20 backdrop-blur-sm rounded-xl overflow-hidden">
+                            <img src="/images/about/Hyukjoon.png"
+                                 alt="Dr. Hyukjoon"
+                                 class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+
+                    
+                    <div class="p-6 pt-0 text-white text-center">
+                        <h1 class="text-[clamp(1.5rem,4vw,2.25rem)] font-bold leading-tight italic">Dr. Howard
+                            (Hyukjoon) Lee, MD, MPH, PhD</h1>
+                        <p class="mt-4 text-[clamp(1rem,2vw,1.25rem)] text-white/90 leading-relaxed">
+                            Consultant Interventional Radiologist | Specialist in Advanced Vascular and Nonvascular
+                            Interventions
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="max-w-6xl mx-auto  pb-12">
+
+            <div x-show="doctor === 'Lameijer'" x-cloak class="w-full flex flex-col items-center gap-6">
+                <div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg">
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-sky-800 mb-6 italic">International experience</h2>
+                    
+                    <p class="text-sky-700 mb-4 leading-relaxed">
+                        Dr. Lameijer completed his radiology residency and fellowship in general radiology with a
+                        special
+                        interest in interventional radiology at the Catharina Hospital in Eindhoven, the Netherlands.
+                    </p>
+                    <p class="text-sky-700 mb-4 leading-relaxed">
+                        After his training, he completed an Interventional Oncology fellowship in the Royal Marsden
+                        Hospital
+                        London Hospital, Europe's largest comprehensive cancer centre, and the UK's only level 3 cancer
+                        care
+                        centre.
+                    </p>
+                    <p class="text-sky-700 leading-relaxed">
+                        Following this, he joined Christchurch Hospital for a fellowship in vascular and non-vascular
+                        radiology in 2022, followed by a position as Consultant Interventional Radiologist. He received
+                        his
+                        internationally recognised EBIR (European Board of Interventional Radiology) certification in
+                        October 2023.
+                    </p>
+                </div>
+
+                <div class="w-full  bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg">
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-sky-800 mb-6 italic">Patient-Centered Care</h2>
+                    
+                    <p class="text-sky-700 mb-4 leading-relaxed">
+                        Dr. Lameijer uses minimally invasive techniques to optimise patient experience, achieving
+                        results
+                        with minimal burden for the patient. He practices within the Interventional Radiology department
+                        at
+                        Christchurch Hospital and often collaborates with the Christchurch Vascular Group (CVG) in St.
+                        George’s hospital to perform vascular surgery procedures.
+                    </p>
+                    <p class="text-sky-700 mb-4 leading-relaxed">
+                        Dr. Lameijer ensures that each patient receives the highest standards of care by close
+                        collaboration
+                        with colleagues, chairing multidisciplinary meetings and continuing education in the latest
+                        techniques and devices.
+                    </p>
+                </div>
+
+                <div class="w-full  bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg">
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-sky-800 mb-6 italic">Comprehensive Expertise in
+                        Specialized Procedures</h2>
+                    
+                    <p class="text-sky-700 mb-4 leading-relaxed">
+                        Dr. Lee offers a broad range of specialized interventions, including:
+                    </p>
+                    <ul class="text-sky-700 leading-relaxed list-disc px-6">
+                        <li>
+                            Ablative Procedures for Tumor Treatment in the kidney, lung and liver
+                        </li>
+
+                        <li>
+                            Microwave ablation and Cryoablation
+                        </li>
+                        <li>
+                            Pelvic and Uterine Conditions: Ovarian Vein Embolization for pelvic congestion syndrome,
+                            Uterine
+                            Fibroid Embolization for myoma
+                        </li>
+                        <li>Peripheral Arterial Disease and Aortic Aneurysmal Disease Treatments</li>
+                        <li>Portacath Insertions for patients requiring long-term intravenous therapy</li>
+                        <li>Various other procedures like biopsies and central venous catheters</li>
+                    </ul>
+                </div>
+
+                <div class="w-full  bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg">
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-sky-800 mb-6 italic">Professional Affiliations</h2>
+                    <ul class="text-sky-700 leading-relaxed list-disc px-6">
+                        <li>
+                            The Royal Australian and New Zealand College of Radiologists (RANZCR) as an Educational
+                            Affiliate
+                        </li>
+                        <li>
+                            The European Society of Interventional Radiology (CIRSE)
+                        </li>
+                        <li>
+                            The Dutch society of Radiology (NVvR)
+                        </li>
+                        <li>
+                            The Dutch society of Interventional Radiology (NVIR)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div x-show="doctor === 'Hyukjoon'" x-cloak class="w-full flex flex-col items-center gap-6">
+                <div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg">
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-sky-800 mb-6 italic">Leading Expert in Interventional
+                        Radiology</h2>
+                    
+                    <p class="text-sky-700 mb-4 leading-relaxed">
+                        Dr. Howard Lee is a highly respected Consultant Interventional Radiologist, known for his
+                        specialized skills in both vascular and nonvascular procedures. With an unwavering commitment to
+                        enhancing patient care through cutting-edge, minimally invasive techniques, Dr. Lee has
+                        established himself as a prominent authority in his field.
+                    </p>
+                </div>
+
+                <div class="w-full  bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg">
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-sky-800 mb-6 italic">Internationally Recognized
+                        Expertise</h2>
+                    
+                    <p class="text-sky-700 mb-4 leading-relaxed">
+                        Dr. Lee’s distinguished career includes comprehensive training and esteemed positions at
+                        globally recognized institutions. After completing his radiology residency and fellowship in
+                        interventional radiology at Seoul National University Bundang Hospital, a premier tertiary care
+                        center in South Korea, he was appointed attending physician and assistant professor at Seoul
+                        National University Hospital. Following this, he joined Christchurch Hospital as a consultant in
+                        2019. Dr. Lee further expanded his clinical expertise and academic contributions as an assistant
+                        professor at the renowned University of Pittsburgh Medical Center in the United States before
+                        returning to Christchurch in 2024.
+                    </p>
+                </div>
+
+                <div class="w-full  bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg">
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-sky-800 mb-6 italic">Patient-Centered and
+                        Results-Driven
+                        Care</h2>
+                    
+                    <p class="text-sky-700 mb-4 leading-relaxed">
+                        Dedicated to patient-centered care, Dr. Lee leverages the latest minimally invasive techniques
+                        and devices to achieve excellent outcomes. He offers personalized consultations and treatments
+                        at St. George’s Hospital and also practices within the Interventional Radiology department at
+                        Christchurch Hospital. Through close collaboration with his medical colleagues, Dr. Lee ensures
+                        that each patient receives the highest standards of care, fostering optimal patient experiences.
+                    </p>
+                </div>
+
+                <div class="w-full  bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg">
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-sky-800 mb-6 italic">Comprehensive Expertise in
+                        Specialized Procedures</h2>
+                    <p class="text-sky-700 mb-4 leading-relaxed">
+                        Dr. Lee offers a broad range of specialized interventions, including:
+                    </p>
+                    <ul class="text-sky-700 leading-relaxed list-disc px-6">
+                        <li>
+                            Musculoskeletal Pain Management through Transarterial Microembolization (TAME) for chronic
+                            pain,
+                            including:
+                        </li>
+                        <ul class="list-disc px-6">
+                            <li>Genicular Artery Embolization for knee pain</li>
+                            <li>Shoulder embolization for Adhesive Capsulitis, shoulder pain</li>
+                            <li>Elbow Pain (Tennis & Golf elbow) Embolization</li>
+                            <li>Plantar Fasciitis Embolization</li>
+                            <li>Hip pain embolization for Greater Trochanteric Pain Syndrome (GTPS), hip OA</li>
+                            <li>Achilles Tendonitis Embolization</li>
+                        </ul>
+                        <li>
+                            Liver Cancer Treatments: Transarterial Chemoembolization (TACE) and Transarterial
+                            Radioembolization (TARE, Y-90) for hepatocellular carcinoma (HCC) and Liver metastasis
+                        </li>
+                        <li>
+                            Ablative Procedures for Tumor Treatment in the kidney and liver
+                            <ul class="list-disc px-6">
+                                <li>
+                                    Microwave ablation, Cryoablation, IRE, ECT
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Pelvic and Uterine Conditions: Ovarian Vein Embolization for pelvic congestion syndrome,
+                            Uterine
+                            Fibroid Embolization for myoma, Catheter directed sclerotherapy for ovarian endometrioma
+                        </li>
+                        <li>Prostate Embolization: Prostate Artery Embolization for benign prostatic hyperplasia (BPH)
+                        </li>
+                        <li>Hemorrhoid Embolization: Rectal Artery Embolization for hemorrhoids</li>
+                        <li>Peripheral Arterial Disease and Aortic Aneurysmal Disease Treatments</li>
+                        <li>Portacath Insertions for patients requiring long-term intravenous therapy</li>
+                    </ul>
+                </div>
+
+                <div class="w-full  bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg">
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-sky-800 mb-6 italic">Professional Affiliations and
+                        Dedication to Excellence</h2>
+                    <ul class="text-sky-700 leading-relaxed list-disc px-6">
+                        <p class="text-sky-700 mb-4 leading-relaxed">
+                            Dr. Lee’s professional affiliations reflect his commitment to upholding the highest
+                            standards in
+                            interventional radiology. He is actively involved in:
+                        </p>
+                        <li>
+                            The Royal Australian and New Zealand College of Radiologists (RANZCR) as an Educational
+                            Affiliate
+                        </li>
+                        <li>
+                            The Interventional Radiology Society of Australasia (IRSA)
+                        </li>
+                        <li>
+                            The European Society of Interventional Radiology (CIRSE)
+                        </li>
+                        <li>
+                            The Society of Interventional Radiology (SIR)
+                        </li>
+                        <li>The Korean Society of Interventional Radiology (KSIR)</li>
+                    </ul>
+
+
+                </div>
+
+                <div class="w-full  bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg">
+                    
+                    <h2 class="text-2xl md:text-3xl font-bold text-sky-800 mb-6 italic">Transforming Patient Outcomes
+                        through Innovation</h2>
+                    <p class="text-sky-700 mb-4 leading-relaxed">
+                        Dr. Howard Lee’s practice is driven by a commitment to innovative techniques and outstanding
+                        patient
+                        care. His dedication to excellence ensures that each patient receives individualized,
+                        state-of-the-art treatments, elevating their healthcare experience and outcomes.
+                    </p>
+                </div>
+
+
+            </div>
+
+        </section>
     </div>
-  </section>
 
-  
-  <section class="max-w-6xl mx-auto px-4 md:px-8 pb-12">
-    
-    <div class="bg-blue-50 rounded-lg p-6 mb-6 shadow-sm">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Leading Expert in Interventional Radiology</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Dr. Howard Lee is a highly respected Consultant Interventional Radiologist, known for his specialized skills in both vascular and nonvascular procedures. With an unwavering commitment to enhancing patient care through cutting-edge, minimally invasive techniques, Dr. Lee has established himself as a prominent authority in his field.
-      </p>
-    </div>
-
-    
-    <div class="bg-blue-50 rounded-lg p-6 mb-6 shadow-sm">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Internationally Recognized Expertise</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Dr. Lee's distinguished career includes comprehensive training and esteemed positions at globally recognized institutions. After completing his radiology residency and fellowship in interventional radiology at Seoul National University Bundang Hospital, a premier tertiary care center in South Korea, he was appointed attending physician and assistant professor at Seoul National University Hospital. Following this, he joined Christchurch Hospital as a consultant in 2019. Dr. Lee further expanded his clinical expertise and academic contributions as an assistant professor at the University of Pittsburgh Medical Center in the United States before returning to Christchurch in 2024.
-      </p>
-    </div>
-
-    
-    <div class="bg-blue-50 rounded-lg p-6 mb-6 shadow-sm">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Patient-Centered and Results-Driven Care</h3>
-      <p class="text-gray-700 leading-relaxed">
-        Dedicated to patient-centered care, Dr. Lee leverages the latest minimally invasive techniques and devices to achieve excellent outcomes. He offers personalized consultations and treatments at St. George's Hospital and also practices within the Interventional Radiology department at Christchurch Hospital. Through close collaboration with his medical colleagues, Dr. Lee ensures that each patient receives the highest standards of care, fostering optimal patient experiences.
-      </p>
-    </div>
-
-    
-    <div class="bg-blue-50 rounded-lg p-6 shadow-sm">
-      <h3 class="text-2xl font-bold text-blue-700 mb-4">Comprehensive Expertise in Specialized Procedures</h3>
-      <p class="text-gray-700 mb-3">Dr. Lee offers a broad range of specialized interventions, including:</p>
-      <ul class="list-disc pl-6 text-gray-700 space-y-1.5">
-        <li>Musculoskeletal Pain Management through Transarterial Microembolization (TAME) for chronic pain, including:</li>
-        <li>- Genicular Artery Embolization for knee pain</li>
-        <li>- Shoulder Tension & Adhesive Capsulitis, shoulder pain</li>
-        <li>- Elbow Pain (tennis & Golf elbow) Embolization</li>
-        <li>- Plantar Fasciitis Embolization</li>
-        <li>- Hip pain embolization for Greater Trochanteric Pain Syndrome (GTPS), hip OA</li>
-        <li>- Achilles Tendinitis Embolization</li>
-        <li>Liver Cancer Treatments: Transarterial Chemoembolization (TACE) and Transarterial Radioembolization (TARE; Y-90) for hepatocellular carcinoma (HCC) and Liver metastasis</li>
-        <li>Ablative Procedures for Tumor Treatment in the kidney and liver</li>
-        <li>- Microwave Ablation, Cryoablation, IRE, ECT</li>
-        <li>Pelvic and Urinary Conditions: Ovarian Vein Embolization for pelvic congestion syndrome, Uterine Fibroid Embolization for myoma, Catheter directed sclerotherapy for ovarian endometrioma</li>
-        <li>Prostate Embolization: Prostate Artery Embolization for benign prostatic hyperplasia (BPH)</li>
-        <li>Hemorrhoid Embolization: Rectal Artery Embolization for Hemorrhoids</li>
-        <li>Peripheral Arterial Disease and Aortic Aneurysmal Disease Treatments</li>
-        <li>Portacath Insertions for patients requiring long-term intravenous therapy</li>
-      </ul>
-    </div>
-  </section>
-
+</div>
 
     </main>
 
     
-    <footer class="bg-blue-900 text-white px-6 py-12 mt-20">
+    <footer class="bg-blue-900 text-white px-6 py-12">
   <div class="max-w-7xl mx-auto">
     <div class="flex justify-around items-start mb-20 mr-20">
       <div class="flex flex-col items-center gap-2 mb-4">
         <div class="w-[164px]">
-          <img src="https://clinxinfo.github.io/siir-preview/images/logo.svg" />
+          <img src="/images/logo.svg" />
         </div>
         <div class="flex gap-4">
           <a href="#" class="text-white">f</a>
@@ -206,11 +427,11 @@
       </div>
       <div>
         <h4 class="font-bold mb-4">Services</h4>
-        <a href="#" class="block text-white mb-2">Terms</a>
+        <a href="/terms" class="block text-white mb-2">Terms</a>
       </div>
       <div>
         <h4 class="font-bold mb-4">Blogs</h4>
-        <a href="#" class="block text-white mb-2">Blogs</a>
+        <a href="/blogs" class="block text-white mb-2">Blogs</a>
       </div>
     </div>
     <div class="pt-8 text-right text-white text-sm">
