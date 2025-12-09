@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://clinxinfo.github.io/siir-preview/about/</loc>
     <lastmod>2025-10-30T23:11:49+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/services/achilles-tendon/</loc>
+    <loc>https://clinxinfo.github.io/siir-preview/services/achilles-tendon/</loc>
     <lastmod>2025-10-30T23:11:49+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://clinxinfo.github.io/siir-preview/</loc>
     <lastmod>2025-10-30T23:11:49+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/services/elbow-pain/</loc>
+    <loc>https://clinxinfo.github.io/siir-preview/services/elbow-pain/</loc>
     <lastmod>2025-10-30T23:11:49+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/services/</loc>
+    <loc>https://clinxinfo.github.io/siir-preview/services/</loc>
     <lastmod>2025-10-30T23:11:49+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://clinxinfo.github.io/siir-preview/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://clinxinfo.github.io/siir-preview/tags/</loc>
   </url>
 </urlset>
