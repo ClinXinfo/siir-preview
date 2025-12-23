@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About list | Canterbury Interventional Group</title>
+    <title>About us | Canterbury Interventional Group</title>
     <meta name="description"
           content="">
 
@@ -114,20 +114,19 @@
             <a href="/siir-preview/"
                class="hover:text-teal-200 transition">Home</a>
             
-            <a href="/siir-preview/about/"
-               class="hover:text-teal-200 transition active text-teal-500 font-bold ">About us</a>
-            
             <a href="/siir-preview/services/"
                class="hover:text-teal-200 transition">Service</a>
             
-            <a href=""
-               class="hover:text-teal-200 transition">Blogs</a>
+            <a href="/siir-preview/about/"
+               class="hover:text-teal-200 transition active text-teal-500 font-bold ">About us</a>
             
         </div>
         <div class="flex items-center gap-3">
-            <button class="text-white border h-[40px] w-[97px] text-center rounded font-medium hover:bg-teal-100 transition">
-                Contact
-            </button>
+            <a href="mailto:admin@southislandir.co.nz">
+                <button class="whitespace-nowrap text-white border h-[40px] text-center px-4 rounded font-medium hover:bg-teal-100 transition hover:text-black">
+                    Make appointment
+                </button>
+            </a>
             
             
             
@@ -144,7 +143,6 @@
     
 
 <div class="bg-gradient-to-br from-[#009647] via-[#6198AF] to-white bg-fixed bg-cover [background-image:linear-gradient(176.14deg,#009647_3.23%,#6198AF_49%,#FFFFFF_94.76%)]">
-
 
     <section class="text-white py-8 px-4 md:px-8">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
@@ -163,33 +161,9 @@
     </div>
   </section>
 
-    <div x-data="{ doctor: 'Lameijer' }">
+    <div x-data="{ doctor: 'Hyukjoon' }">
         <section class="py-8 px-4 md:px-8">
             <div class="max-w-6xl mx-auto flex gap-4 justify-between w-full">
-                
-                <div
-                        class="bg-[#FFFFFF4A] rounded-lg shadow-xl overflow-hidden transition-all duration-300 cursor-pointer flex-1 p-4 "
-                        @click="doctor = 'Lameijer'"
-                        :class="{
-           'bg-[#1B1B1B4A] shadow-2xl': doctor === 'Lameijer'
-      }"
-    >
-                    <div class="p-6">
-                        <div class="bg-white/20 backdrop-blur-sm rounded-xl overflow-hidden">
-                            <img src='https://clinxinfo.github.io/siir-preview/images/about/Lameijer.png'
-                                 alt="Dr. Joost Lameijer"
-                                 class="w-full h-auto object-cover">
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0 text-white text-center">
-                        <h1 class="text-[clamp(1.5rem,4vw,2.25rem)] font-bold leading-tight italic">Dr. Joost Lameijer,
-                            MD, PhD</h1>
-                        <p class="mt-4 text-[clamp(1rem,2vw,1.25rem)] text-white/90 leading-relaxed">
-                            Consultant Interventional Radiologist specialising in both vascular and nonvascular
-                            procedures
-                        </p>
-                    </div>
-                </div>
 
                 
                 <div
@@ -218,6 +192,33 @@
                         </p>
                     </div>
                 </div>
+
+                
+                <div
+                        class="bg-[#FFFFFF4A] rounded-lg shadow-xl overflow-hidden transition-all duration-300 cursor-pointer flex-1 p-4 "
+                        @click="doctor = 'Lameijer'"
+                        :class="{
+           'bg-[#1B1B1B4A] shadow-2xl': doctor === 'Lameijer'
+      }"
+    >
+                    <div class="p-6">
+                        <div class="bg-white/20 backdrop-blur-sm rounded-xl overflow-hidden">
+                            <img src='https://clinxinfo.github.io/siir-preview/images/about/Lameijer.png'
+                                 alt="Dr. Joost Lameijer"
+                                 class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 text-white text-center">
+                        <h1 class="text-[clamp(1.5rem,4vw,2.25rem)] font-bold leading-tight italic">Dr. Joost Lameijer,
+                            MD, PhD</h1>
+                        <p class="mt-4 text-[clamp(1rem,2vw,1.25rem)] text-white/90 leading-relaxed">
+                            Consultant Interventional Radiologist specialising in both vascular and nonvascular
+                            procedures
+                        </p>
+                    </div>
+                </div>
+
+
             </div>
         </section>
 
@@ -486,7 +487,7 @@
       </div>
       <div>
         <h4 class="font-bold mb-4">Blogs</h4>
-        <a href='https://clinxinfo.github.io/siir-preview/blogs' class="block text-white mb-2">Blogs</a>
+
       </div>
     </div>
     <div class="pt-8 text-right text-white text-sm">
