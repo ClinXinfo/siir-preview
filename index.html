@@ -541,55 +541,163 @@
     </div>
 </section>
 
+<section
+    x-data="{
+        currentSlide: 0,
+        totalSlides: 4,
+        itemsPerScreen: 1, // 默认移动端1个
 
-<section class="max-w-7xl mx-auto px-6 py-10 bg-gray-50">
-    <h2 class="text-3xl font-bold mb-12 text-gray-900">Patient's feedback</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-        <div
-                class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-lg shadow-md"
-        >
-            <div class="flex items-center gap-3 mb-4">
-                <div
-                        class="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center text-white text-sm font-bold"
+        // 初始化+监听窗口大小调整itemsPerScreen
+        init() {
+            this.updateItemsPerScreen();
+            window.addEventListener('resize', this.updateItemsPerScreen);
+        },
+        destroy() {
+            window.removeEventListener('resize', this.updateItemsPerScreen);
+        },
+
+        // 响应式调整显示数量：移动端1个，桌面端2个
+        updateItemsPerScreen() {
+            this.itemsPerScreen = window.innerWidth >= 768 ? 2 : 1;
+            // 窗口变化时重置currentSlide到合理范围，避免越界
+            this.currentSlide = Math.min(this.currentSlide, this.maxIndex);
+        },
+
+        // 计算最大可滑动索引（适配不同屏幕的显示数量）
+        get maxIndex() {
+            return this.totalSlides - this.itemsPerScreen;
+        },
+
+        // 下一页逻辑（适配响应式）
+        next() {
+            this.currentSlide = this.currentSlide >= this.maxIndex
+                ? 0
+                : this.currentSlide + 1;
+        },
+
+        // 上一页逻辑（适配响应式）
+        prev() {
+            this.currentSlide = this.currentSlide <= 0
+                ? this.maxIndex
+                : this.currentSlide - 1;
+        }
+    }"
+    x-init="init()"
+    x-destroy="destroy()"
+    class="relative w-full py-20 px-4 md:px-8 overflow-hidden bg-gray-100"
+>
+
+    <div class="absolute inset-0 z-0">
+        <img src='https://clinxinfo.github.io/siir-preview/images/patients-feedback-background.png'
+             alt="Background"
+             class="w-full h-full object-cover opacity-100"
+        />
+        <div class="absolute inset-0 bg-white/70"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-8 md:mb-12">
+            <h2 class="text-3xl md:text-4xl font-medium text-[#002855]">Patient's feedback</h2>
+
+            <div class="flex gap-4">
+                <button
+                    @click="prev()"
+                    class="w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center text-[#002855] hover:bg-[#002855] hover:text-white transition-colors duration-300 focus:outline-none"
                 >
-                    JM
-                </div>
-                <div>
-                    <h4 class="font-bold">John M.</h4>
-                </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                    </svg>
+                </button>
+
+                <button
+                    @click="next()"
+                    class="w-12 h-12 rounded-full border border-gray-400 flex items-center justify-center text-[#002855] hover:bg-[#002855] hover:text-white transition-colors duration-300 focus:outline-none"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </button>
             </div>
-            <p class="text-gray-700 text-sm leading-relaxed">
-                "After undergoing a hip replacement at Canterbury Hospital, I
-                developed a blood clot during the post-operation recovery period.
-                The surgical team referred me to the interventional radiologists,
-                who performed a minimally invasive procedure during the operation
-                and the afterward pain reduce significantly. The hospital's service
-                and efficiency was outstanding, and I felt confident with the
-                experienced staff. I would definitely recommend my rehabilitation!"
-            </p>
         </div>
-        <div
-                class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-lg shadow-md"
-        >
-            <div class="flex items-center gap-3 mb-4">
-                <div
-                        class="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center text-white text-sm font-bold"
-                >
-                    SL
+
+        <div class="overflow-hidden pb-10">
+            <div
+                class="flex transition-transform duration-500 ease-in-out gap-6"
+                :style="`transform: translateX(-${currentSlide * (100 / itemsPerScreen)}%)`"
+            >
+                
+                <div class="flex-shrink-0 w-full md:w-[calc(50%-3px)]">
+                    <div class="h-full bg-white/80 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-sm border border-white/50">
+                        <div class="flex items-center gap-4 mb-6">
+                            <img
+                                src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=150"
+                                alt="John M."
+                                class="w-12 h-12 rounded-xl object-cover shadow-sm"
+                            >
+                            <div>
+                                <h4 class="font-bold text-lg text-[#002855]">John M.</h4>
+                            </div>
+                        </div>
+                        <p class="text-[#002855]/80 text-base leading-relaxed font-light">
+                            After undergoing a hip replacement at Canterbury Interventional Group, I feel like I've been given a new lease on life! From the detailed pre-operative plan explanations to the precise surgical skills during the operation and the attentive post-operative care by the nurses, every step of the process made me feel completely at ease. Dr. Smith is not only highly professional but also incredibly patient, always taking the time to answer all my questions. The hospital's service team is also extremely thoughtful—they truly exceeded my expectations!
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="font-bold">Sarah L.</h4>
+
+                <div class="flex-shrink-0 w-full md:w-[calc(50%-3px)]">
+                    <div class="h-full bg-white/80 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-sm border border-white/50">
+                        <div class="flex items-center gap-4 mb-6">
+                            <img
+                                src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=150"
+                                alt="Sarah L."
+                                class="w-12 h-12 rounded-xl object-cover shadow-sm"
+                            >
+                            <div>
+                                <h4 class="font-bold text-lg text-[#002855]">Sarah L.</h4>
+                            </div>
+                        </div>
+                        <p class="text-[#002855]/80 text-base leading-relaxed font-light">
+                            I underwent an interventional procedure for my cardiovascular issues at this hospital. I was extremely nervous initially, but Dr. Williams' calm and confident demeanor quickly put me at ease. The surgery was a complete success, and I recovered much faster than I anticipated. During my hospital stay, the nursing staff were not only highly professional but also very attuned to my emotional state, frequently checking in on me and attending to my needs. I wholeheartedly recommend [Hospital Name]—both the medical expertise and the service here are impeccable!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 w-full md:w-[calc(50%-3px)]">
+                    <div class="h-full bg-white/80 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-sm border border-white/50">
+                        <div class="flex items-center gap-4 mb-6">
+                            <img
+                                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150"
+                                alt="Michael B."
+                                class="w-12 h-12 rounded-xl object-cover shadow-sm"
+                            >
+                            <div>
+                                <h4 class="font-bold text-lg text-[#002855]">Michael B.</h4>
+                            </div>
+                        </div>
+                        <p class="text-[#002855]/80 text-base leading-relaxed font-light">
+                            The care I received was exceptional. From the moment I walked in, I was treated with kindness and respect. The facilities are top-notch and the doctors are world-class. I never thought surgery could be such a smooth experience. Highly recommended for anyone looking for quality healthcare.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 w-full md:w-[calc(50%-3px)]">
+                    <div class="h-full bg-white/80 backdrop-blur-md rounded-2xl p-8 md:p-10 shadow-sm border border-white/50">
+                        <div class="flex items-center gap-4 mb-6">
+                            <img
+                                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
+                                alt="Emily R."
+                                class="w-12 h-12 rounded-xl object-cover shadow-sm"
+                            >
+                            <div>
+                                <h4 class="font-bold text-lg text-[#002855]">Emily R.</h4>
+                            </div>
+                        </div>
+                        <p class="text-[#002855]/80 text-base leading-relaxed font-light">
+                            Recovery was a breeze thanks to the dedicated physiotherapy team. They customized a plan just for me and motivated me every step of the way. The nursing staff was always available and incredibly supportive. A truly 5-star experience.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <p class="text-gray-700 text-sm leading-relaxed">
-                "I underwent an interventional procedure for my varicose veins at
-                Christchurch Hospital. The team was professional, friendly, and
-                extremely helpful. The procedure itself was swift and painless.
-                During the post-op recovery period, I noticed an incredible
-                improvement in my symptoms. I would highly recommend the experience
-                to anyone considering the procedure. The expertise and the service
-                has been impeccable!"
-            </p>
         </div>
     </div>
 </section>
