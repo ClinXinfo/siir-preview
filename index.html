@@ -98,10 +98,48 @@
             ol {
                 @apply list-disc px-5 pb-5 pt-0;
             }
+
+             
+        table {
+            @apply w-full border-collapse rounded-lg overflow-hidden shadow-sm;
+        }
+
+        table thead {
+            @apply bg-sky-100;
+        }
+
+        table th {
+            @apply px-6 py-4 text-left font-semibold text-slate-800 border-b border-sky-200;
+        }
+
+        table td {
+            @apply px-6 py-4 text-slate-700 border-b border-sky-100;
+        }
+
+        table tbody tr:last-child td {
+            @apply border-b-0;  
+        }
+
+        table tbody tr:hover {
+            @apply bg-sky-50;  
+        }
+
+         
+        @media (max-width: 640px) {
+            table th,
+            table td {
+                @apply px-3 py-3 text-sm;
+            }
+
+            table td {
+                @apply break-words;
+            }
+        }
         }
     </style>
 </head>
 <body class="font-sans text-dark bg-gray-50">
+
 
 
 <nav class="bg-gradient-to-r from-blue-900 via-teal-800 to-blue-900 text-white px-4 py-3 md:px-6 md:py-4"
@@ -125,7 +163,7 @@
         
         <a href='https://clinxinfo.github.io/siir-preview/' class="z-50">
             <div class="flex items-center gap-2 w-[140px] md:w-[164px]">
-                <img src='https://clinxinfo.github.io/siir-preview/images/logo.svg' class="w-full h-auto" />
+                <img src='https://clinxinfo.github.io/siir-preview/images/logo.svg' class="w-full h-auto"/>
             </div>
         </a>
 
@@ -160,9 +198,9 @@
 
         
         <button
-            @click="toggleMenu"
-            class="md:hidden z-50 flex items-center justify-center w-[44px] h-[44px] rounded border border-white/20 hover:bg-teal-800/50 transition-all duration-300"
-            :class="{ 'bg-teal-800/30 border-teal-200/50': isMenuOpen }"
+                @click="toggleMenu"
+                class="md:hidden z-50 flex items-center justify-center w-[44px] h-[44px] rounded border border-white/20 hover:bg-teal-800/50 transition-all duration-300"
+                :class="{ 'bg-teal-800/30 border-teal-200/50': isMenuOpen }"
         >
             <i class="fa-solid text-xl" :class="{ 'fa-xmark': isMenuOpen, 'fa-bars': !isMenuOpen }"></i>
         </button>

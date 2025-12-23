@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elbow Pain | Canterbury Interventional Group</title>
+    <title>Uterine Fibroid | Canterbury Interventional Group</title>
     <meta name="description"
           content="">
 
@@ -97,10 +97,48 @@
             ol {
                 @apply list-disc px-5 pb-5 pt-0;
             }
+
+             
+        table {
+            @apply w-full border-collapse rounded-lg overflow-hidden shadow-sm;
+        }
+
+        table thead {
+            @apply bg-sky-100;
+        }
+
+        table th {
+            @apply px-6 py-4 text-left font-semibold text-slate-800 border-b border-sky-200;
+        }
+
+        table td {
+            @apply px-6 py-4 text-slate-700 border-b border-sky-100;
+        }
+
+        table tbody tr:last-child td {
+            @apply border-b-0;  
+        }
+
+        table tbody tr:hover {
+            @apply bg-sky-50;  
+        }
+
+         
+        @media (max-width: 640px) {
+            table th,
+            table td {
+                @apply px-3 py-3 text-sm;
+            }
+
+            table td {
+                @apply break-words;
+            }
+        }
         }
     </style>
 </head>
 <body class="font-sans text-dark bg-gray-50">
+
 
 
 <nav class="bg-gradient-to-r from-blue-900 via-teal-800 to-blue-900 text-white px-4 py-3 md:px-6 md:py-4"
@@ -124,7 +162,7 @@
         
         <a href='https://clinxinfo.github.io/siir-preview/' class="z-50">
             <div class="flex items-center gap-2 w-[140px] md:w-[164px]">
-                <img src='https://clinxinfo.github.io/siir-preview/images/logo.svg' class="w-full h-auto" />
+                <img src='https://clinxinfo.github.io/siir-preview/images/logo.svg' class="w-full h-auto"/>
             </div>
         </a>
 
@@ -137,7 +175,7 @@
             </a>
             
             <a href="/siir-preview/services/"
-               class="text-xl hover:text-teal-200 transition ">
+               class="text-xl hover:text-teal-200 transition  text-teal-500 font-bold ">
                 Service
             </a>
             
@@ -159,9 +197,9 @@
 
         
         <button
-            @click="toggleMenu"
-            class="md:hidden z-50 flex items-center justify-center w-[44px] h-[44px] rounded border border-white/20 hover:bg-teal-800/50 transition-all duration-300"
-            :class="{ 'bg-teal-800/30 border-teal-200/50': isMenuOpen }"
+                @click="toggleMenu"
+                class="md:hidden z-50 flex items-center justify-center w-[44px] h-[44px] rounded border border-white/20 hover:bg-teal-800/50 transition-all duration-300"
+                :class="{ 'bg-teal-800/30 border-teal-200/50': isMenuOpen }"
         >
             <i class="fa-solid text-xl" :class="{ 'fa-xmark': isMenuOpen, 'fa-bars': !isMenuOpen }"></i>
         </button>
@@ -179,7 +217,7 @@
             
             <a href="/siir-preview/services/"
                @click="closeMenu"
-               class="text-2xl font-medium py-2 px-4 hover:text-teal-200 transition ">
+               class="text-2xl font-medium py-2 px-4 hover:text-teal-200 transition  text-teal-500 font-bold ">
                 Service
             </a>
             
@@ -211,11 +249,14 @@
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center gap-8">
             <div class="md:w-1/2">
-                <h1 class="text-5xl md:text-5xl leading-tight mb-4  font-bold  tracking-normal  overflow-hidden">Our service</h1>
+                <h1 class="text-5xl md:text-5xl leading-tight mb-4  font-bold  tracking-normal  overflow-hidden">
+                    Uterine Fibroid</h1>
                 <p class="mb-8 max-w-md">
+                    
                     Our expert team offers minimally invasive, image-guided procedures that provide rapid relief,
                     improved outcomes, and faster recovery—all without the need for traditional surgery.
                 </p>
+                
             </div>
             <div class="md:w-1/2">
                 <img src='https://clinxinfo.github.io/siir-preview/images/services/HeroSection.png' alt="Doctor performing procedure"
@@ -228,7 +269,98 @@
 
 <section class="service-single-page bg-gradient-to-b from-secondary/90 to-white py-10">
     
+    <div class="container mx-auto px-4">
 
+            <div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg mb-6 md:mb-8">
+    <h1 id="what-women-are-saying-about-ufe">What Women Are Saying About UFE</h1>
+<blockquote>
+<p>Life is so much more full, happy, and wonderful since I’ve had UFE. I have a lot of energy. I get to go out with my friends and enjoy life like I did before I had fibroids.
+—— Gwen</p>
+</blockquote>
+<blockquote>
+<p>My experience with UFE was very positive. When I was trying to seek treatment in other places I just felt like I was being dismissed. I oftentimes felt like it was my fault that I had fibroids. That I was wasting people’s time because I was trying to figure out what I was going to do.
+—— Carmen</p>
+</blockquote>
+<blockquote>
+<p>A hysterectomy should not be a first choice unless it’s medically necessary. UFE is minimally invasive and I only needed one procedure. Above all, it gave me back my life.
+—— Shelly</p>
+</blockquote>
+<h1 id="deciding-on-ufe">Deciding on UFE</h1>
+<p>Your gynecologist or primary care physician can provide a referral to an interventional radiologist who can help you decide based on your medical history and the size and location of your fibroids.
+If you do not currently have a referring gynecologist, you can directly contact an interventional radiologist to schedule a UFE consultation.</p>
+<hr>
+<h1 id="uterine-fibroid-embolization">Uterine Fibroid Embolization</h1>
+<p>UFE is performed by an interventional radiologist (IR), a doctor who uses X-rays and other imaging techniques to see inside the body and treat conditions without surgery.</p>
+<p>During the UFE procedure, you are given sedation medication but remain awake. The IR inserts a catheter (a thin, hollow tube) into your upper thigh or into your wrist to access your arteries. The IR then uses X-ray imaging to guide the catheter to your right or left uterine artery. Tiny round beads—each measuring the size of a grain of sand— are injected into the catheter and into your fibroid-feeding vessels. The tiny beads block the blood flow to the fibroids, causing the fibroids to shrink and alleviating symptoms. The embolization process is then repeated in your other uterine artery to completely block the blood flow to your fibroids. The particles are biocompati- ble and remain at the fibroid site.</p>
+<hr>
+<h1 id="fibroids-after-embolization">Fibroids After Embolization</h1>
+<p>After UFE, the fibroids shrink, scar and retract into the wall of the uterus. Some women may temporarily experience vaginal discharge, including expelled fibroid tissue.</p>
+<h2 id="patients-who-are-an-ideal-candidate-for-ufe-include-women-who">Patients who are an ideal candidate for UFE include women who:</h2>
+<ol>
+<li>Have symptomatic fibroids</li>
+<li>Want to keep their uterus</li>
+<li>Do not want surgery</li>
+<li>Want a faster recovery time</li>
+<li>May not be a good candidate for surgery</li>
+</ol>
+<hr>
+<h1 id="ufe-and-pregnancy">UFE and Pregnancy</h1>
+<p>You should not have this procedure if you are pregnant. The effects of UFE on the ability to become pregnant and carry a fetus to term, and on the development of the fetus, have not been determined.</p>
+<p>While women can become pregnant after uterine fibroid embolization and have successful pregnancies, no scientific studies have fully established the safety of UFE on fertility and pregnancy. As with any medical intervention, you should discuss the most current clinical data with your doctor before deciding on the fibroid treatment option that is right for you.</p>
+<hr>
+<h1 id="health-insurance-coverage-for-ufe">Health Insurance Coverage for UFE</h1>
+<p>Most insurance companies cover UFE as a treatment for symptomatic fibroids. Discuss your coverage with your doctor or insurance provider before the procedure.</p>
+<hr>
+<h1 id="risks-associated-with-ufe">Risks Associated with UFE</h1>
+<p>UFE is a safe procedure for treating symptomatic fibroids with minimal risk. The most reported risk factors and complications associated with UFE are transient amenorrhea (temporary absence of menstrual period), short-term allergic reaction/rash, vaginal discharge/infection, mis-targeted embolization (when the embolic reaches heathy tissue), possible fibroid passage, and post-embolization syndrome, which can include low-grade fever, pain, fatigue, nausea and vomiting.</p>
+<p>You should talk with your doctor about the risks associated with UFE.</p>
+<hr>
+<h1 id="uterine-fibroids-and-their-symptoms">Uterine Fibroids and Their Symptoms</h1>
+<p>Uterine fibroids are benign, non-cancerous growths in or on the walls of the uterus, or womb. They can range from less than an inch to more than six inches in diameter. African- American women and those with a family history are more likely to develop fibroids. Most fibroids are asymptomatic, and are only discovered when a woman has a routine pelvic examination. If you do experience fibroid symptoms, they may include:</p>
+<ol>
+<li>Heavy, prolonged menstrual periods, sometimes with clots</li>
+<li>Anemia (fatigue due to low red blood count)</li>
+<li>Pain or pressure between the hip bones or in the back of the legs</li>
+<li>Pain during sexual intercourse</li>
+<li>Urinary frequency</li>
+<li>Constipation or bloating</li>
+<li>An enlarged belly</li>
+</ol>
+<h1 id="benefits-of-ufe1">Benefits of UFE1</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Metric</th>
+          <th>UFE</th>
+          <th>Hysterectomy</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Procedure</td>
+          <td>UFE</td>
+          <td>Hysterectomy</td>
+      </tr>
+      <tr>
+          <td>Hospital Stay Time</td>
+          <td>Usually performed as outpatient procedure</td>
+          <td>2.3 days</td>
+      </tr>
+      <tr>
+          <td>Recovery Time (Estimated days until returning to work or normal activity)</td>
+          <td>Less than 11 days</td>
+          <td>32.5 days</td>
+      </tr>
+      <tr>
+          <td>Experienced Complications (After 30 days)</td>
+          <td>12.7%</td>
+          <td>32%</td>
+      </tr>
+  </tbody>
+</table>
+</div>
+
+    </div>
     
 </section>
 

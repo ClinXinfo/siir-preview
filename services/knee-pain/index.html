@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elbow Pain | Canterbury Interventional Group</title>
+    <title>Knee Pain | Canterbury Interventional Group</title>
     <meta name="description"
           content="">
 
@@ -97,10 +97,48 @@
             ol {
                 @apply list-disc px-5 pb-5 pt-0;
             }
+
+             
+        table {
+            @apply w-full border-collapse rounded-lg overflow-hidden shadow-sm;
+        }
+
+        table thead {
+            @apply bg-sky-100;
+        }
+
+        table th {
+            @apply px-6 py-4 text-left font-semibold text-slate-800 border-b border-sky-200;
+        }
+
+        table td {
+            @apply px-6 py-4 text-slate-700 border-b border-sky-100;
+        }
+
+        table tbody tr:last-child td {
+            @apply border-b-0;  
+        }
+
+        table tbody tr:hover {
+            @apply bg-sky-50;  
+        }
+
+         
+        @media (max-width: 640px) {
+            table th,
+            table td {
+                @apply px-3 py-3 text-sm;
+            }
+
+            table td {
+                @apply break-words;
+            }
+        }
         }
     </style>
 </head>
 <body class="font-sans text-dark bg-gray-50">
+
 
 
 <nav class="bg-gradient-to-r from-blue-900 via-teal-800 to-blue-900 text-white px-4 py-3 md:px-6 md:py-4"
@@ -124,7 +162,7 @@
         
         <a href='https://clinxinfo.github.io/siir-preview/' class="z-50">
             <div class="flex items-center gap-2 w-[140px] md:w-[164px]">
-                <img src='https://clinxinfo.github.io/siir-preview/images/logo.svg' class="w-full h-auto" />
+                <img src='https://clinxinfo.github.io/siir-preview/images/logo.svg' class="w-full h-auto"/>
             </div>
         </a>
 
@@ -137,7 +175,7 @@
             </a>
             
             <a href="/siir-preview/services/"
-               class="text-xl hover:text-teal-200 transition ">
+               class="text-xl hover:text-teal-200 transition  text-teal-500 font-bold ">
                 Service
             </a>
             
@@ -159,9 +197,9 @@
 
         
         <button
-            @click="toggleMenu"
-            class="md:hidden z-50 flex items-center justify-center w-[44px] h-[44px] rounded border border-white/20 hover:bg-teal-800/50 transition-all duration-300"
-            :class="{ 'bg-teal-800/30 border-teal-200/50': isMenuOpen }"
+                @click="toggleMenu"
+                class="md:hidden z-50 flex items-center justify-center w-[44px] h-[44px] rounded border border-white/20 hover:bg-teal-800/50 transition-all duration-300"
+                :class="{ 'bg-teal-800/30 border-teal-200/50': isMenuOpen }"
         >
             <i class="fa-solid text-xl" :class="{ 'fa-xmark': isMenuOpen, 'fa-bars': !isMenuOpen }"></i>
         </button>
@@ -179,7 +217,7 @@
             
             <a href="/siir-preview/services/"
                @click="closeMenu"
-               class="text-2xl font-medium py-2 px-4 hover:text-teal-200 transition ">
+               class="text-2xl font-medium py-2 px-4 hover:text-teal-200 transition  text-teal-500 font-bold ">
                 Service
             </a>
             
@@ -211,11 +249,14 @@
     <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center gap-8">
             <div class="md:w-1/2">
-                <h1 class="text-5xl md:text-5xl leading-tight mb-4  font-bold  tracking-normal  overflow-hidden">Our service</h1>
+                <h1 class="text-5xl md:text-5xl leading-tight mb-4  font-bold  tracking-normal  overflow-hidden">
+                    Knee Pain</h1>
                 <p class="mb-8 max-w-md">
+                    
                     Our expert team offers minimally invasive, image-guided procedures that provide rapid relief,
                     improved outcomes, and faster recovery—all without the need for traditional surgery.
                 </p>
+                
             </div>
             <div class="md:w-1/2">
                 <img src='https://clinxinfo.github.io/siir-preview/images/services/HeroSection.png' alt="Doctor performing procedure"
@@ -228,7 +269,87 @@
 
 <section class="service-single-page bg-gradient-to-b from-secondary/90 to-white py-10">
     
+    <div class="container mx-auto px-4">
 
+            <div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg mb-6 md:mb-8">
+    <h1 id="genicular-artery-embolization-gae">Genicular Artery Embolization (GAE)</h1>
+<p>A minimally invasive treatment for chronic knee pain due to osteoarthritis</p>
+</div>
+<div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg mb-6 md:mb-8">
+    <h1 id="understanding-knee-pain">Understanding Knee Pain</h1>
+<p>Chronic knee pain is commonly caused by <strong>osteoarthritis</strong>, a degenerative joint condition that leads to inflammation of the lining of the knee (synovium). This inflammation causes pain, stiffness, and swelling.</p>
+<p>Over time, <strong>abnormal small blood vessels</strong> may form around the knee joint and contribute to ongoing pain and inflammation.</p>
+<p>Genicular Artery Embolization (GAE) is a minimally invasive, image-guided procedure for treating chronic knee pain caused by osteoarthritis or related to chronic inflammation. It works by reducing blood flow to the inflamed areas of the knee, which can help relieve pain and improve mobility. Interventional radiologists will insert a small catheter (a thin hollow tube) into the artery of the patient’s upper thigh and, with the use of X-rays, guide the catheter to the arteries supplying the lining of the knee. Tiny particles are then injected through the catheter into these arteries, reducing the blood supply. This in turn reduces the inflammation associated with osteoarthritis, which alleviates the pain</p>
+</div>
+<div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg mb-6 md:mb-8">
+    <h1 id="common-conditions-treated">Common Conditions Treated</h1>
+<ol>
+<li>Knee osteoarthritis</li>
+<li>Persistent knee pain after arthroscopy or joint injury</li>
+<li>Chronic inflammatory knee pain unresponsive to other treatments</li>
+</ol>
+</div>
+<div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg mb-6 md:mb-8">
+    <h1 id="who-may-benefit">Who May Benefit</h1>
+<p>You may be suitable for GAE if you:</p>
+<ol>
+<li>Have moderate to severe knee pain due to osteoarthritis more than 3 months</li>
+<li>Have not had relief from medications, physiotherapy, or injections</li>
+<li>Wish to avoid or delay knee replacement surgery</li>
+<li>Prefer a non-surgical, outpatient option for pain relief</li>
+</ol>
+</div>
+<div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg mb-6 md:mb-8">
+    <h1 id="how-the-procedure-is-performed">How the Procedure Is Performed</h1>
+<ol>
+<li>Performed by an <strong>interventional radiologist</strong></li>
+<li>Done under <strong>local anaesthesia</strong> with <strong>light sedation</strong> for comfort</li>
+<li>A small <strong>catheter</strong> is inserted into an artery (usually in the upper thigh)</li>
+<li>Using <strong>X-ray guidance</strong>, the catheter is advanced to the small arteries supplying the inflamed areas of the knee</li>
+<li>Tiny <strong>microparticles</strong> are injected to block the abnormal vessels while maintaining normal blood flow</li>
+<li>The procedure usually takes <strong>about 1–2 hours</strong> and is performed as a <strong>day-stay treatment</strong></li>
+</ol>
+</div>
+<div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg mb-6 md:mb-8">
+    <h1 id="benefits">Benefits</h1>
+<ol>
+<li><strong>Minimally invasive</strong> – no surgical incision</li>
+<li><strong>Performed under local anaesthesia</strong> – no general anaesthesia</li>
+<li><strong>Day procedure</strong> – no overnight hospital stay</li>
+<li><strong>Pain improvement</strong> usually within weeks</li>
+<li><strong>Improved mobility and function</strong></li>
+<li><strong>May delay or reduce the need for knee replacement surgery</strong></li>
+</ol>
+</div>
+<div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg mb-6 md:mb-8">
+    <h1 id="risks-and-side-effects">Risks and Side Effects</h1>
+<p>Most patients recover without complications, but possible side effects include:</p>
+<ol>
+<li>Mild bruising or tenderness at the catheter site</li>
+<li>Temporary skin discolouration around the knee (resolves in 2–3 weeks)</li>
+<li>Temporary mild swelling or discomfort around the knee for a few days after the procedure</li>
+<li>Temporary mild numbness in the lower limb</li>
+<li>Rarely: infection, tissue injury, or small skin ulceration</li>
+</ol>
+</div>
+<div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg mb-6 md:mb-8">
+    <h1 id="after-the-procedure">After the Procedure</h1>
+<ol>
+<li>Most patients go home the same day</li>
+<li>Light activities can usually resume within 24–48 hours</li>
+<li>Pain relief typically begins within <strong>2–4 weeks</strong>, with continued improvement over several months</li>
+<li>GAE can reduce the need for regular pain medications and help you return to activities you may have stopped due to knee pain. Some people feel relief right away, while others may notice gradual improvement over several weeks.</li>
+<li><strong>Physiotherapy</strong> may help maintain mobility and knee strength</li>
+<li>Follow-up is arranged with your interventional radiologist</li>
+</ol>
+</div>
+<div class="w-full bg-sky-100 border border-sky-300 p-6 md:p-8 shadow-sm rounded-lg mb-6 md:mb-8">
+    <h1 id="talk-to-us">Talk to Us</h1>
+<p>If you suffer from <strong>chronic knee pain</strong> caused by <strong>osteoarthritis</strong> and are looking for a <strong>non-surgical option</strong>, talk to your <strong>interventional radiologist</strong> or <strong>referring doctor</strong> about <strong>Genicular Artery Embolization (GAE)</strong>.</p>
+<p>For more information, visit: <a href="https://theii.org/gae"><strong>https://theii.org/gae</strong></a>.</p>
+</div>
+
+    </div>
     
 </section>
 
